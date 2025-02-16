@@ -8,6 +8,7 @@ import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
 import WorkFlowTimeline from "./components/Timeline/Timeline.jsx";
 import PreviewSwiper from "./components/PreviewSwiper/PreviewSwiper.jsx";
+import ContactForm from "./components/ContactForm/ContactForm.jsx";
 
 import slider_img1 from "../../assets/images/slider_img_1.jpg";
 import slider_img2 from "../../assets/images/slider_img_2.jpg";
@@ -228,8 +229,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div>
-
+            <div className='form-container'>
+                <h1 style={{fontWeight: '300'}}>CONTACT US</h1>
+                <ContactForm />
             </div>
         </>
     );
