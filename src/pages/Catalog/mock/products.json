@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "RENAULT ARKANA 2022",
+    "description": ["1.8л", "Механика", "Передний"],
+    "price": 200,
+    "images": ["https://files2.aster.kz/market/aster/2025-2/292328_6c6db387-d37b-4945-9b70-67d28f0807b6_L_resolution2084x1173.webp",
+      "https://files2.aster.kz/market/aster/2025-2/292328_6c6db387-d37b-4945-9b70-67d28f0807b6_L_resolution2084x1173.webp",
+      "https://files2.aster.kz/market/aster/2025-2/292328_6c6db387-d37b-4945-9b70-67d28f0807b6_L_resolution2084x1173.webp"]
+  }
+]
