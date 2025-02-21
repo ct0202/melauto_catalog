@@ -16,7 +16,11 @@ import {
 import { Menu as MenuIcon } from '@mui/icons-material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
+
+import { HashLink } from 'react-router-hash-link';
 
 import logo from "../../assets/images/logo.png";
 
@@ -33,13 +37,12 @@ const Navbar = () => {
     };
 
     const menuItems = [
-        { label: 'Home', path: '/' },
+        { label: 'Home', path: '/#home'},
         { label: 'Catalog', path: '/catalog' },
-        { label: 'Company', path: '/about' },
-        { label: 'In Stock', path: '/stock' },
-        { label: 'Contact Us', path: '/contact' },
-        { label: 'Workflow', path: '/workflow' },
-        { label: 'Reviews', path: '/reviews' },
+        { label: 'Services', path: '/#services' },
+        { label: 'Contact Us', path: '/#contacts' },
+        { label: 'Workflow', path: '/#workflow'},
+        { label: 'Reviews', path: '/#reviews' },
     ];
 
     return (
@@ -47,9 +50,9 @@ const Navbar = () => {
         <AppBar className="navbar" color='secondary'>
             <Toolbar color='#9e9e9e'>
                 <div className='logo-container'>
-                    <Link to="/">
+                    <RouterLink to="/">
                         <img src={logo} alt='logo' className="logo" />
-                    </Link>
+                    </RouterLink>
                 </div>
 
 
@@ -65,7 +68,7 @@ const Navbar = () => {
                         <Drawer anchor="right" open={menuOpen} onClose={toggleDrawer(false)}>
                             <List>
                                 {menuItems.map((item) => (
-                                    <ListItem button key={item.label} component={Link} to={item.path} onClick={toggleDrawer(false)}>
+                                    <ListItem button key={item.label} component={HashLink} to={item.path} onClick={toggleDrawer(false)}>
                                         <ListItemText sx={{color: "black"}} primary={item.label} />
                                     </ListItem>
                                 ))}
@@ -78,7 +81,7 @@ const Navbar = () => {
                             <Button
                                 key={item.label}
                                 color="inherit"
-                                component={Link}
+                                component={HashLink}
                                 to={item.path}
                                 sx={{ '&:hover': { color: 'var(--primary-color)' } }}
                             >

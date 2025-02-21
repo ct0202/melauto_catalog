@@ -38,7 +38,7 @@ import {Diversity1} from "@mui/icons-material";
 const Home = () => {
     return (
         <>
-            <div>
+            <div id='home'>
                 <Swiper
                     pagination={{
                         dynamicBullets: true,
@@ -62,9 +62,11 @@ const Home = () => {
                             <div className="subtitle">
                                 6 000 000 $
                             </div>
+                            <a href="#contacts">
                             <button className="slide-button">
                                 FIND MY CAR
                             </button>
+                            </a>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -76,9 +78,11 @@ const Home = () => {
                             <div className="subtitle">
                                 700 000 $
                             </div>
-                            <button className="slide-button">
-                                FIND MY CAR
-                            </button>
+                            <a href="#contacts">
+                                <button className="slide-button">
+                                    FIND MY CAR
+                                </button>
+                            </a>
                         </div>
                     </SwiperSlide>
                 </Swiper>
@@ -152,7 +156,7 @@ const Home = () => {
                 <p className="catalog-preview-title">CATALOG <button className="view-all-button">VIEW ALL</button></p>
                 <PreviewSwiper products={data} />
             </div>
-            <div className="services">
+            <div className="services" id = 'services'>
                 <h1 style={{color: 'white'}}>OUR SERVICES</h1>
                 <div className="service-card">
                     <div>
@@ -179,13 +183,13 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="workflow">
+            <div className="workflow" id = 'workflow'>
                 <h1 className="workflow-title">WORKFLOW</h1>
                 <div className="workflow-content">
                     <WorkFlowTimeline/>
                 </div>
             </div>
-            <div className="reviews">
+            <div className="reviews" id="reviews">
                 <h1 className="reviews-title">REVIEWS</h1>
                 <div className="reviews-list">
                     <div className="review-card">
@@ -229,7 +233,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='form-container'>
+            <div className='form-container' id="contacts">
                 <h1 style={{fontWeight: '300'}}>CONTACT US</h1>
                 <ContactForm />
             </div>
