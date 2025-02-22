@@ -16,7 +16,7 @@ const Catalog = () => {
     // }, []);
 
     useEffect(() => {
-        fetch("http://localhost:2024/get")
+        fetch("https://api.melavto.com/get")
             .then(response => response.json())
             .then(data => setProducts(data['universities']))
             .catch(error => console.error("Ошибка загрузки данных:", error));
