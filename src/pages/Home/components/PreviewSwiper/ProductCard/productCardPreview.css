@@ -6,6 +6,10 @@
     background-color: #fff;
 }
 
+@media(max-width:561px) {
+    width: 98%;
+}
+
 .swiper-container {
     width: 100%;
     height: 180px;

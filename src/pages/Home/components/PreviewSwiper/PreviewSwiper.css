@@ -17,10 +17,25 @@
     }
 }
 
+
 .preview-swiper .swiper-slide {
     width: 100%;
     height: 100%;
     text-align: center;
     font-size: 18px;
     position: relative;
+}
+
+@media(max-width: 561px) {
+    .preview-swiper{
+        padding-left: 10px;
+    }
+
+    .preview-swiper .swiper-slide {
+        width: 95%;
+        height: 100%;
+        text-align: center;
+        font-size: 18px;
+        position: relative;
+    }
 }
