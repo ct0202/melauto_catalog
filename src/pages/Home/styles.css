@@ -575,5 +575,23 @@
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 70px;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 200px;
+}
+
+.footer-icons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
 }

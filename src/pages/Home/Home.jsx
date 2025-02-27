@@ -32,10 +32,23 @@ import review_img_1 from "../../assets/images/review_avatar_1.png"
 import review_img_2 from "../../assets/images/review_avatar_2.png"
 import review_img_3 from "../../assets/images/review_avatar_3.png"
 
+
+import { Facebook, Instagram, Twitter, LinkedIn } from "@mui/icons-material";
+
 import data from './mock/products.json';
-import {Diversity1} from "@mui/icons-material";
+import {useEffect, useState} from "react";
 
 const Home = () => {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch("https://api.melavto.com/get")
+            .then(response => response.json())
+            .then(data => setProducts(data['universities']))
+            .catch(error => console.error("Ошибка загрузки данных:", error));
+    }, []);
+
+
     return (
         <>
             <div id='home'>
@@ -154,7 +167,7 @@ const Home = () => {
             {/*</div>*/}
             <div className="preview-catalog">
                 <p className="catalog-preview-title">CATALOG <button className="view-all-button">VIEW ALL</button></p>
-                <PreviewSwiper products={data} />
+                <PreviewSwiper products={products} />
             </div>
             <div className="services" id = 'services'>
                 <h1 style={{color: 'white'}}>OUR SERVICES</h1>
@@ -236,6 +249,17 @@ const Home = () => {
             <div className='form-container' id="contacts">
                 <h1 style={{fontWeight: '300'}}>CONTACT US</h1>
                 <ContactForm />
+            </div>
+            <div className='footer' id='socials'>
+                <h2 style={{fontWeight: '300'}}>
+                    SOCIALS
+                </h2>
+                <div className='footer-icons-container'>
+                    <Facebook />
+                    <Twitter />
+                    <Instagram />
+                    <LinkedIn />
+                </div>
             </div>
         </>
     );
